@@ -5,37 +5,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio — Designer</title>
   <meta name="description" content="Visual designer crafting systems across brand, product, and print." />
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <main class="hero hero--grid">
-    <section class="corner corner--tl">
-      <p class="eyebrow">Portfolio</p>
-      <h1 class="name">Your Name</h1>
-    </section>
+<body class="archive-page">
+  <!-- Header with logo and title -->
+  <header class="archive__header">
+    <div class="archive__header-top">
+      <a class="archive__logo" href="index.html">Portfolio</a>
+      <nav class="archive__nav">
+        <a href="#about">About</a>
+        <a href="mailto:hello@example.com">Contact</a>
+      </nav>
+    </div>
+    <h1 class="archive__title">Projects</h1>
+  </header>
 
-    <nav class="corner corner--tr nav-links">
-      <a href="work.html">Work</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <!-- Main editorial layout: sidebar + grid -->
+  <div class="archive__container">
+    <!-- Left Sidebar (30%) -->
+    <aside class="archive__sidebar">
+      <!-- About Section -->
+      <section class="sidebar__section">
+        <h2 class="sidebar__label">About</h2>
+        <div class="sidebar__divider"></div>
+        <p class="sidebar__text">
+          Visual designer crafting systems across brand, product, and print. Interested in clear hierarchies, bold typography, and disciplined grids.
+        </p>
+      </section>
 
-    <section class="corner corner--bl">
-      <p class="subtitle">
-        UX, brand, and graphic design—building cohesive systems with clarity and edge.
-      </p>
-    </section>
+      <!-- Categories Filter -->
+      <section class="sidebar__section">
+        <h2 class="sidebar__label">Categories</h2>
+        <div class="sidebar__divider"></div>
+        <ul class="filter__list">
+          <li><button class="filter__btn filter__btn--active" data-filter="all">All Projects</button></li>
+          <li><button class="filter__btn" data-filter="brand">Brand Identity</button></li>
+          <li><button class="filter__btn" data-filter="product">Product Design</button></li>
+          <li><button class="filter__btn" data-filter="editorial">Editorial</button></li>
+          <li><button class="filter__btn" data-filter="installation">Installation</button></li>
+        </ul>
+      </section>
+    </aside>
 
-    <section class="corner corner--br actions">
-      <a class="pill" href="work.html">View work</a>
-      <a class="pill" href="mailto:hello@example.com">Email</a>
-    </section>
-  </main>
+    <!-- Right Main Content (70%) -->
+    <main class="archive__main">
+      <!-- Project Grid (12-column) -->
+      <div class="project__grid" id="projectGrid">
+        <!-- Projects will be rendered here by JS -->
+      </div>
+    </main>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
   <script src="js/bg.js"></script>
+  <script src="js/archive.js"></script>
 </body>
 </html>
