@@ -268,7 +268,6 @@ a:hover {
   color: var(--text);
 }
 
-.work__sidebar-title,
 .work__item-title {
   font-family: var(--font-serif);
   font-style: italic;
