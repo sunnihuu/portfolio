@@ -5,7 +5,8 @@ const projects = [
     title: "Aurora Brand System",
     category: "brand",
     image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop",
-    meta: "Brand Identity / 2024",
+    year: "2024",
+    role: "Brand Design",
     description: "Complete visual system with motion behaviors, typography, and packaging guidelines."
   },
   {
@@ -13,7 +14,8 @@ const projects = [
     title: "Northwind Product Design",
     category: "product",
     image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop",
-    meta: "Product Design / 2024",
+    year: "2024",
+    role: "Product Design",
     description: "Rebuilt the design language for a data-heavy SaaS, improving clarity and conversion."
   },
   {
@@ -21,7 +23,8 @@ const projects = [
     title: "Lightforms Installation",
     category: "installation",
     image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop",
-    meta: "Installation / 2024",
+    year: "2024",
+    role: "Creative Direction",
     description: "Immersive generative visuals for a pop-up gallery; real-time sound-reactive compositions."
   },
   {
@@ -29,7 +32,8 @@ const projects = [
     title: "Editorial Series: Design Futures",
     category: "editorial",
     image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop",
-    meta: "Editorial / 2023",
+    year: "2023",
+    role: "Editor & Designer",
     description: "A four-part publication exploring emerging paradigms in digital design and sustainability."
   },
   {
@@ -37,7 +41,8 @@ const projects = [
     title: "Cipher Identity System",
     category: "brand",
     image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop",
-    meta: "Brand Identity / 2023",
+    year: "2023",
+    role: "Brand Design",
     description: "Minimal monogram and lettermark system for a boutique architecture firm."
   },
   {
@@ -45,7 +50,8 @@ const projects = [
     title: "Nexus App Interface",
     category: "product",
     image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop",
-    meta: "Product Design / 2023",
+    year: "2023",
+    role: "Product Design",
     description: "Collaborative tool interface with emphasis on efficient workflows and clear information hierarchy."
   },
   {
@@ -53,7 +59,8 @@ const projects = [
     title: "Kinetic Wall Installation",
     category: "installation",
     image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop",
-    meta: "Installation / 2023",
+    year: "2023",
+    role: "Creative Direction",
     description: "Interactive light-reactive surface for corporate atrium; responds to ambient sound."
   },
   {
@@ -61,7 +68,8 @@ const projects = [
     title: "Typography Compendium",
     category: "editorial",
     image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop",
-    meta: "Editorial / 2023",
+    year: "2023",
+    role: "Researcher & Designer",
     description: "A comprehensive guide to Swiss typographic principles and modern application."
   }
 ];
@@ -81,11 +89,14 @@ function renderProjects(filter = 'all') {
     card.href = '#'; // Link to project detail page
     card.dataset.category = project.category;
 
+    const meta = `${project.year} · ${project.category.toUpperCase()} · ${project.role}`.toUpperCase();
+
     card.innerHTML = `
       <img src="${project.image}" alt="${project.title}" class="project__image">
-      <h3 class="project__title">${project.title}</h3>
-      <p class="project__meta">${project.meta}</p>
-      <span class="project__category">${project.category}</span>
+      <div class="project__content">
+        <h3 class="project__title t-h3">${project.title}</h3>
+        <p class="project__meta t-meta">${meta}</p>
+      </div>
     `;
 
     grid.appendChild(card);

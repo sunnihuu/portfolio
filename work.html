@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Work — Sunni Hu</title>
+  <meta name="description" content="Visual designer crafting systems across brand, product, and print." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="archive-page">
+  <!-- Main Container with dark surface background -->
+  <div class="archive-container">
+    <!-- Header with logo and title -->
+    <header class="archive__header">
+      <div class="archive__header-top">
+        <a class="archive__logo" href="index.html">Sunni Hu — Brand + Graphics · Environmental Graphics · Spatial Branding</a>
+        <nav class="archive__nav">
+          <a href="#about">About</a>
+          <a href="mailto:hello@example.com">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main layout: sidebar + grid -->
+    <div class="archive__container">
+      <!-- Left Sidebar (28%) -->
+      <aside class="archive__sidebar">
+        <!-- Categories Filter -->
+        <section class="sidebar__section">
+          <h2 class="sidebar__label t-label">Categories</h2>
+          <div class="sidebar__divider"></div>
+          <ul class="filter__list">
+            <li><button class="filter__btn filter__btn--active t-p1" data-filter="all">All Projects</button></li>
+            <li><button class="filter__btn t-p1" data-filter="graphics">Graphics + Brand</button></li>
+            <li><button class="filter__btn t-p1" data-filter="computation">Computation</button></li>
+          </ul>
+        </section>
+      </aside>
+
+      <!-- Right Main Content (9 columns) -->
+      <main class="archive__main">
+        <!-- Project Grid -->
+        <div class="project__grid" id="projectGrid">
+          <!-- Projects will be rendered here by JS -->
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
+  <!-- <script src="js/bg.js"></script> -->
+  <script src="js/archive.js"></script>
+</body>
+</html>
