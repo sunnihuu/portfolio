@@ -195,6 +195,26 @@
       object-fit: cover;
     }
 
+    .vertical-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .vertical-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .vertical-grid-2 .project-image img,
+    .vertical-grid-3 .project-image img {
+      height: 100%;
+      object-fit: cover;
+    }
+
     .project-image {
       width: 100%;
     }
@@ -233,6 +253,12 @@
       .project-gallery-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
+      }
+
+      .vertical-grid-2,
+      .vertical-grid-3 {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
       }
     }
 
@@ -283,12 +309,12 @@
       </div>
 
       <div class="project-gallery">
-        <div class="project-hero">
+        <div class="vertical-grid-2">
           <div class="project-image">
             <img src="assets/images/UCCA Kids/UCCA Kids 0.jpg" alt="UCCA Kids Growth Diary - Banner">
           </div>
           <div class="project-image">
-            <img src="assets/images/UCCA Kids/UCCA Kids 9.jpg" alt="UCCA Kids Growth Diary - Poster">
+            <img src="assets/images/UCCA Kids/UCCA Kids 8.JPG" alt="UCCA Kids Growth Diary - Detail 5">
           </div>
         </div>
         <div class="project-image">
@@ -297,25 +323,27 @@
         <div class="project-image">
           <img src="assets/images/UCCA Kids/UCCA Kids 2.jpg" alt="UCCA Kids Growth Diary - Web Visual 2">
         </div>
-        <div class="project-gallery-grid">
+        <div class="project-image">
+          <img src="assets/images/UCCA Kids/UCCA Kids 3.jpg" alt="UCCA Kids Growth Diary - Application">
+        </div>
+        <div class="vertical-grid-2">
           <div class="project-image">
             <img src="assets/images/UCCA Kids/UCCA Kids 4.JPG" alt="UCCA Kids Growth Diary - Detail 1">
           </div>
           <div class="project-image">
             <img src="assets/images/UCCA Kids/UCCA Kids 5.JPG" alt="UCCA Kids Growth Diary - Detail 2">
           </div>
-          <div class="project-image">
-            <img src="assets/images/UCCA Kids/UCCA Kids 6.JPG" alt="UCCA Kids Growth Diary - Detail 3">
-          </div>
+        </div>
+        <div class="project-image">
+          <img src="assets/images/UCCA Kids/UCCA Kids 6.JPG" alt="UCCA Kids Growth Diary - Detail 3">
+        </div>
+        <div class="vertical-grid-2">
           <div class="project-image">
             <img src="assets/images/UCCA Kids/UCCA Kids 7.JPG" alt="UCCA Kids Growth Diary - Detail 4">
           </div>
-        </div>
-        <div class="project-image">
-          <img src="assets/images/UCCA Kids/UCCA Kids 8.JPG" alt="UCCA Kids Growth Diary - Detail 5">
-        </div>
-        <div class="project-image">
-          <img src="assets/images/UCCA Kids/UCCA Kids 3.jpg" alt="UCCA Kids Growth Diary - Application 1">
+          <div class="project-image">
+            <img src="assets/images/UCCA Kids/UCCA Kids 9.jpg" alt="UCCA Kids Growth Diary - Poster">
+          </div>
         </div>
         <div class="project-image">
           <img src="assets/images/UCCA Kids/UCCA Kids 10.jpg" alt="UCCA Kids Growth Diary - Application 2">
