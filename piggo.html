@@ -98,48 +98,57 @@
       font-size: 18px;
       font-weight: 500;
       color: #0D0D0D;
+      margin: 0 0 2.5rem 0;
+      line-height: 1.3;
+      letter-spacing: 0.02em;
+    }
+
+    .project-meta-block {
+      font-family: 'Work Sans', sans-serif;
       margin: 0 0 2rem 0;
-      opacity: 0.7;
+      padding-bottom: 1.5rem;
+    }
+
+    .project-meta-block p {
+      margin: 0.4rem 0;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .project-meta-block strong {
+      font-size: 11px;
+      font-weight: 600;
+      color: #888888;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      min-width: 80px;
+      flex-shrink: 0;
+    }
+
+    .project-meta-block span {
+      font-size: 14px;
+      font-weight: 400;
+      color: #0D0D0D;
+      line-height: 1.5;
     }
 
     .project-meta {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-
-    .project-meta-section {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-
-    .project-meta-label {
       font-family: 'Work Sans', sans-serif;
       font-size: 12px;
-      font-weight: 600;
+      color: #555555;
+      margin-bottom: 2rem;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: #0D0D0D;
-      opacity: 0.5;
-    }
-
-    .project-meta-value {
-      font-family: 'Work Sans', sans-serif;
-      font-size: 16px;
-      font-weight: 400;
-      color: #0D0D0D;
-      line-height: 1.6;
+      letter-spacing: 0.08em;
     }
 
     .project-description {
       font-family: 'Work Sans', sans-serif;
-      font-size: 16px;
-      font-weight: 400;
+      font-size: 15px;
+      line-height: 1.5;
       color: #0D0D0D;
-      line-height: 1.8;
-      margin-top: 3rem;
+      margin-top: -20px;
+      padding-top: 1.5rem;
+      max-width: 50ch;
     }
 
     .project-description p {
@@ -181,47 +190,40 @@
     }
   </style>
 </head>
-<body class="home-page">
-  <header class="archive__header">
-    <div class="archive__header-top">
-      <a href="index.html" class="archive__logo">Sunni Hu</a>
-      <nav class="archive__nav">
-        <a href="index.html">About</a>
-        <a href="work.html">Work</a>
-        <a href="mailto:sunnihu818@gmail.com">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <div class="project-layout">
-    <aside class="project-info">
-      <h1 class="project-title">Piggo</h1>
-      <p class="project-subtitle">Product Design (UI/UX)</p>
-      
-      <div class="project-meta">
-        <div class="project-meta-section">
-          <div class="project-meta-label">Year</div>
-          <div class="project-meta-value">2024</div>
+<body class="archive-page home-page">
+  <div class="archive-container">
+    <header class="archive__header">
+      <div class="archive__header-top">
+        <a class="archive__logo" href="index.html">Sunni Hu</a>
+        <nav class="archive__nav">
+          <a href="index.html">Home</a>
+          <a href="work.html">Works</a>
+          <a href="#about">About</a>
+        </nav>
+      </div>
+    </header>
+    
+    <main class="project-layout">
+      <div class="project-info">
+        <a href="work.html" class="back-button" style="display:inline-block;margin-bottom:1.5rem;font-family:'Work Sans',sans-serif;font-size:14px;color:#555;text-decoration:none;border:none;background:none;padding:0;cursor:pointer;letter-spacing:0.04em;">
+          ←Back
+        </a>
+        <h1 class="project-title">Piggo</h1>
+        <p class="project-subtitle">Product Design (UI/UX)</p>
+        
+        <div class="project-meta-block">
+          <p><strong>Year</strong><span>2024</span></p>
+          <p><strong>Role</strong><span>UX Designer, Product Designer</span></p>
+          <p><strong>Scope</strong><span>Mobile App Design, User Experience, Interface Design</span></p>
         </div>
         
-        <div class="project-meta-section">
-          <div class="project-meta-label">Role</div>
-          <div class="project-meta-value">UX Designer, Product Designer</div>
-        </div>
-        
-        <div class="project-meta-section">
-          <div class="project-meta-label">Scope</div>
-          <div class="project-meta-value">Mobile App Design, User Experience, Interface Design</div>
+        <div class="project-description">
+          <p>Piggo is a financial management application designed to make personal budgeting intuitive and engaging through thoughtful interface design.</p>
+          <p>The user experience prioritizes clarity and accessibility, helping users build better financial habits through seamless daily interactions.</p>
         </div>
       </div>
 
-      <div class="project-description">
-        <p>Piggo is a financial management application designed to make personal budgeting intuitive and engaging through thoughtful interface design.</p>
-        <p>The user experience prioritizes clarity and accessibility, helping users build better financial habits through seamless daily interactions.</p>
-      </div>
-    </aside>
-
-    <main class="project-gallery">
+      <div class="project-gallery">
       <div class="project-image">
         <img src="assets/images/Piggo/10.jpg" alt="Piggo - Screen 1">
       </div>
@@ -245,15 +247,5 @@
       </div>
     </main>
   </div>
-
-  <script>
-    // Stagger animation for images
-    document.addEventListener('DOMContentLoaded', () => {
-      const images = document.querySelectorAll('.project-image');
-      images.forEach((img, index) => {
-        img.style.animationDelay = `${index * 0.1}s`;
-      });
-    });
-  </script>
 </body>
 </html>
