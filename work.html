@@ -239,6 +239,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      transition: opacity 0.2s ease;
     }
     
     .work__item-title {
@@ -247,6 +248,7 @@
       font-weight: 600;
       color: #0D0D0D;
       margin: 0;
+      transition: color 0.2s ease;
     }
     
     .work__item-meta {
@@ -255,6 +257,18 @@
       font-weight: 400;
       color: #555555;
       margin: 0;
+    }
+    
+    .work__item:hover {
+      cursor: pointer;
+    }
+    
+    .work__item:hover .work__item-title {
+      color: #CC0000;
+    }
+    
+    .work__item:hover .work__item-image img {
+      opacity: 0.9;
     }
   </style>
 </head>
@@ -284,13 +298,13 @@
         </aside>
         <div class="work__gallery">
           <div class="work__grid">
-            <div class="work__item" data-category="graphics">
+            <a href="ucca-memory-imagination.html" class="work__item" data-category="graphics" style="text-decoration: none; color: inherit;">
               <div class="work__item-image">
-                <img src="assets/images/sun.png" alt="Project 1">
+                <img src="assets/images/sun.png" alt="UCCA Memory and Imagination">
               </div>
-              <h3 class="work__item-title">Brand Identity</h3>
+              <h3 class="work__item-title">UCCA — Memory and Imagination</h3>
               <p class="work__item-meta">Brand + Graphics • 2026</p>
-            </div>
+            </a>
             <div class="work__item" data-category="graphics">
               <div class="work__item-image">
                 <img src="assets/images/sun.png" alt="Project 2">
