@@ -327,8 +327,7 @@ a:hover {
 }
 
 .archive__logo:hover {
-  opacity: 0.7;
-  color: #0F2FA3;
+  text-decoration: none;
 }
 
 .archive__nav {
