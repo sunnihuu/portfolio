@@ -1,3 +1,75 @@
+/* Work Index Page Titles: Bigger & Bold */
+.work__sidebar-title,
+.work__item-title {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0 0 1rem 0;
+}
+.archive__sidebar::-webkit-scrollbar {
+  width: 6px;
+  background: transparent;
+}
+.archive__sidebar::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.12);
+  border-radius: 3px;
+}
+.archive__sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.archive__sidebar::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.12);
+  border-radius: 3px;
+}
+.archive__sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+/* Thinner vertical scrollbar for columns */
+.project-info::-webkit-scrollbar,
+.project-gallery::-webkit-scrollbar {
+  width: 6px;
+  background: transparent;
+}
+.project-info::-webkit-scrollbar-thumb,
+.project-gallery::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.12);
+  border-radius: 3px;
+}
+.project-info::-webkit-scrollbar-track,
+.project-gallery::-webkit-scrollbar-track {
+  background: transparent;
+}
+/* Thin Editorial Divider */
+.editorial-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(0,0,0,0.12);
+  border-radius: 1px;
+  margin: 1.5rem 0;
+  display: block;
+}
+/* Project Divider: longer and left-aligned */
+.project-divider {
+  width: 160px;
+  height: 2px;
+  background: var(--line);
+  margin: 1.5rem 0 1.5rem 0;
+  border-radius: 1px;
+  display: block;
+  margin-left: 0;
+}
+
+/* Overview Paragraph: editorial style */
+.project-overview {
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 48ch;
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--text);
+}
 :root {
   /* Clean Light Color System - Typography-Driven Editorial */
   --bg: #FAFAFA;             /* paper white - main background */
@@ -128,7 +200,27 @@ canvas {
   font-weight: var(--fw-p2);
   text-transform: uppercase;
   letter-spacing: var(--ls-p2);
+  margin: 0 0 2px 0;
+}
+
+.meta-scope-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5px;
   margin: 0;
+  padding: 0;
+}
+.meta-scope-list li {
+  font-family: var(--font-sans);
+  font-size: var(--fs-p2);
+  line-height: var(--lh-p2);
+  font-weight: var(--fw-p2);
+  color: var(--muted);
+  text-transform: none;
+  letter-spacing: 0.01em;
+  margin: 0;
+  list-style: none;
+}
   color: var(--muted);
 }
 
@@ -139,7 +231,7 @@ canvas {
   font-weight: var(--fw-p2);
   text-transform: uppercase;
   letter-spacing: var(--ls-p2);
-  margin: 0;
+  margin: 0 0 2px 0;
 }
 
 /* Link styles */
@@ -250,7 +342,7 @@ a:hover {
   font-family: var(--font-sans);
   font-size: clamp(48px, 6vw, 64px);
   line-height: 1.1;
-  font-weight: var(--fw-h1);
+  font-weight: 700;
   letter-spacing: var(--ls-h1);
   margin: 0;
   color: var(--text);
@@ -386,7 +478,7 @@ a:hover {
   font-style: italic;
   font-size: clamp(28px, 4vw, 32px);
   line-height: 1.3;
-  font-weight: 400;
+  font-weight: 600;
   color: var(--muted);
   margin: -0.25rem 0 0 0;
   max-width: 35ch;
