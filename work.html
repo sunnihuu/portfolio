@@ -18,6 +18,28 @@
       }
     }
     
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes scaleIn {
+      from {
+        opacity: 0;
+        transform: scale(0.98);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    
     html.home-page,
     body.home-page {
       background: #FFF9F0;
@@ -226,6 +248,14 @@
       display: flex;
       flex-direction: column;
       gap: 0.75rem;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
+    
+    .work__item.animate-in {
+      opacity: 1;
+      transform: translateY(0);
     }
     
     .work__item-image {
@@ -240,7 +270,15 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: opacity 0.2s ease;
+      opacity: 0;
+      transform: scale(0.98);
+      transition: opacity 0.4s ease-out 0.15s, transform 0.4s ease-out 0.15s;
+      transform-origin: center;
+    }
+    
+    .work__item.animate-in .work__item-image img {
+      opacity: 1;
+      transform: scale(1);
     }
     
     .work__item-title {
@@ -302,21 +340,35 @@
           <div class="work__grid">
             <a href="ucca-memory-imagination.html" class="work__item" data-category="graphics" style="text-decoration: none; color: inherit;">
               <div class="work__item-image">
-                <img src="assets/images/Memory and Imagination/8.png" alt="UCCA Memory and Imagination">
+                <img src="assets/images/Memory and Imagination/Memory and Imagination 8.png" alt="UCCA Memory and Imagination">
               </div>
               <h3 class="work__item-title">Memory and Imagination</h3>
               <p class="work__item-meta">Brand + Graphics • 2026</p>
             </a>
+            <a href="ucca-kids.html" class="work__item" data-category="graphics" style="text-decoration: none; color: inherit;">
+              <div class="work__item-image">
+                <img src="assets/images/UCCA Kids/UCCA Kids 0.jpg" alt="UCCA Kids Growth Diary">
+              </div>
+              <h3 class="work__item-title">UCCA Kids Growth Diary</h3>
+              <p class="work__item-meta">Brand + Graphics • 2023</p>
+            </a>
+            <a href="ucca-membership.html" class="work__item" data-category="product" style="text-decoration: none; color: inherit;">
+              <div class="work__item-image">
+                <img src="assets/images/UCCA Membership Upgrade/UCCA Membership Upgrade_1.jpg" alt="UCCA Membership Upgrade">
+              </div>
+              <h3 class="work__item-title">UCCA Membership Upgrade</h3>
+              <p class="work__item-meta">Product Design (UI/UX) • 2023</p>
+            </a>
             <a href="cafe-sabato.html" class="work__item" data-category="graphics" style="text-decoration: none; color: inherit;">
               <div class="work__item-image">
-                <img src="assets/images/Café Sabato/11.png" alt="Café Sabato">
+                <img src="assets/images/Café Sabato/Café Sabato 11.png" alt="Café Sabato">
               </div>
               <h3 class="work__item-title">Café Sabato</h3>
               <p class="work__item-meta">Brand + Graphics • 2025</p>
             </a>
             <a href="met-junzi.html" class="work__item" data-category="graphics" style="text-decoration: none; color: inherit;">
               <div class="work__item-image">
-                <img src="assets/images/The Met/the-Met-x-junzi_Package Gif.gif" alt="The Met Store × Junzi">
+                <img src="assets/images/The Met/The Met 10.gif" alt="The Met Store × Junzi">
               </div>
               <h3 class="work__item-title">The Met Store × Junzi</h3>
               <p class="work__item-meta">Packaging Design • 2024</p>
