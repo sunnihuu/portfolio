@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" class="home-page">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Piggo | Sunni Hu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    
+    html.home-page,
+    body.home-page {
+      background: #FFF9F0;
+      color: #0D0D0D;
+      height: 100%;
+    }
+    
+    .home-page .archive__header {
+      background: transparent;
+      border-bottom: 1px solid rgba(0,0,0,0.12);
+      flex-shrink: 0;
+      padding: 1.5rem clamp(2rem, 3vw, 3rem);
+    }
+    
+    .home-page .archive__header .archive__header-top {
+      margin-bottom: 0;
+    }
+    
+    .home-page .archive__logo {
+      color: #0D0D0D;
+      font-size: clamp(14px, 2vw, 18px);
+      font-weight: 400;
+      text-transform: none;
+    }
+    
+    .home-page .archive__logo:hover {
+      color: #CC0000;
+      opacity: 1;
+    }
+    
+    .home-page .archive__nav a {
+      color: #0D0D0D;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    
+    .home-page .archive__nav a[href="work.html"] {
+      color: #CC0000;
+      font-weight: 600;
+    }
+    
+    .home-page .archive__nav a[href="index.html"],
+    .home-page .archive__nav a[href="#about"] {
+      color: #0D0D0D;
+    }
+    
+    .home-page .archive__nav a:hover {
+      color: #CC0000;
+    }
+
+    .project-layout {
+      display: grid;
+      grid-template-columns: 350px 1fr;
+      gap: 0;
+      height: calc(100vh - 100px);
+      overflow: hidden;
+    }
+
+    .project-info {
+      padding: clamp(2rem, 3vw, 3rem);
+      border-right: 1px solid rgba(0,0,0,0.12);
+      overflow-y: auto;
+      height: 100%;
+    }
+
+    .project-title {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(32px, 4.5vw, 42px);
+      font-style: italic;
+      font-weight: 400;
+      line-height: 0.95;
+      margin: 0 0 0.5rem 0;
+      color: #0D0D0D;
+    }
+
+    .project-subtitle {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      color: #0D0D0D;
+      margin: 0 0 2rem 0;
+      opacity: 0.7;
+    }
+
+    .project-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .project-meta-section {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .project-meta-label {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #0D0D0D;
+      opacity: 0.5;
+    }
+
+    .project-meta-value {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      color: #0D0D0D;
+      line-height: 1.6;
+    }
+
+    .project-description {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      color: #0D0D0D;
+      line-height: 1.8;
+      margin-top: 3rem;
+    }
+
+    .project-description p {
+      margin: 0 0 1rem 0;
+    }
+
+    .project-gallery {
+      overflow-y: auto;
+      height: 100%;
+      padding: clamp(2rem, 3vw, 3rem);
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .project-image {
+      width: 100%;
+      opacity: 0;
+      animation: fadeIn 0.6s ease-out forwards;
+      margin: 0;
+    }
+
+    .project-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .project-layout {
+        grid-template-columns: 1fr;
+        height: auto;
+      }
+
+      .project-info {
+        border-right: none;
+        border-bottom: 1px solid rgba(0,0,0,0.12);
+      }
+    }
+  </style>
+</head>
+<body class="home-page">
+  <header class="archive__header">
+    <div class="archive__header-top">
+      <a href="index.html" class="archive__logo">Sunni Hu</a>
+      <nav class="archive__nav">
+        <a href="index.html">About</a>
+        <a href="work.html">Work</a>
+        <a href="mailto:sunnihu818@gmail.com">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="project-layout">
+    <aside class="project-info">
+      <h1 class="project-title">Piggo</h1>
+      <p class="project-subtitle">Product Design (UI/UX)</p>
+      
+      <div class="project-meta">
+        <div class="project-meta-section">
+          <div class="project-meta-label">Year</div>
+          <div class="project-meta-value">2024</div>
+        </div>
+        
+        <div class="project-meta-section">
+          <div class="project-meta-label">Role</div>
+          <div class="project-meta-value">UX Designer, Product Designer</div>
+        </div>
+        
+        <div class="project-meta-section">
+          <div class="project-meta-label">Scope</div>
+          <div class="project-meta-value">Mobile App Design, User Experience, Interface Design</div>
+        </div>
+      </div>
+
+      <div class="project-description">
+        <p>Piggo is a financial management application designed to make personal budgeting intuitive and engaging through thoughtful interface design.</p>
+        <p>The user experience prioritizes clarity and accessibility, helping users build better financial habits through seamless daily interactions.</p>
+      </div>
+    </aside>
+
+    <main class="project-gallery">
+      <div class="project-image">
+        <img src="assets/images/Piggo/10.jpg" alt="Piggo - Screen 1">
+      </div>
+      <div class="project-image">
+        <img src="assets/images/Piggo/11.jpg" alt="Piggo - Screen 2">
+      </div>
+      <div class="project-image">
+        <img src="assets/images/Piggo/12.jpg" alt="Piggo - Screen 3">
+      </div>
+      <div class="project-image">
+        <img src="assets/images/Piggo/13.jpg" alt="Piggo - Screen 4">
+      </div>
+      <div class="project-image">
+        <img src="assets/images/Piggo/14.jpg" alt="Piggo - Screen 5">
+      </div>
+      <div class="project-image">
+        <img src="assets/images/Piggo/15.jpg" alt="Piggo - Screen 6">
+      </div>
+      <div class="project-image">
+        <img src="assets/images/Piggo/16.jpg" alt="Piggo - Screen 7">
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // Stagger animation for images
+    document.addEventListener('DOMContentLoaded', () => {
+      const images = document.querySelectorAll('.project-image');
+      images.forEach((img, index) => {
+        img.style.animationDelay = `${index * 0.1}s`;
+      });
+    });
+  </script>
+</body>
+</html>
