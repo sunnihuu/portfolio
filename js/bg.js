@@ -1,8 +1,4 @@
-/**
- * Animated Perlin-noise dot grid background using p5.js
- * Creates an interactive, responsive grid of dots that animate based on Perlin noise
- * and respond subtly to mouse movement
- */
+// Animated Perlin-noise dot grid background (p5.js)
 const sketch = (p) => {
   let xScale = 0.012;
   let yScale = 0.014;
@@ -30,7 +26,7 @@ const sketch = (p) => {
     p.clear();
     offset += 0.35;
 
-    // Shift the noise field subtly with pointer movement
+    // shift the noise field subtly with pointer movement
     const mx = p.map(p.mouseX, 0, p.width, -100, 100);
     const my = p.map(p.mouseY, 0, p.height, -100, 100);
 
@@ -38,7 +34,7 @@ const sketch = (p) => {
       for (let y = gap / 2; y < p.height; y += gap) {
         const noiseValue = p.noise((x + offset + mx) * xScale, (y + offset + my) * yScale);
         const diameter = noiseValue * gap * 0.9 + 2;
-        // Soft graphite tone to sit on a white canvas
+        // soft graphite tone to sit on a white canvas
         p.fill(40, 44, 52, 26 + 30 * noiseValue);
         p.circle(x, y, diameter);
       }

@@ -1,8 +1,3 @@
-/**
- * Archive page project management and filtering
- * Manages project data and implements category-based filtering
- */
-
 // Project Data
 const projects = [
   {
@@ -79,10 +74,7 @@ const projects = [
   }
 ];
 
-/**
- * Render projects to the grid
- * @param {string} filter - Category filter ('all' or specific category)
- */
+// Render Projects
 function renderProjects(filter = 'all') {
   const grid = document.getElementById('projectGrid');
   grid.innerHTML = '';
@@ -111,9 +103,7 @@ function renderProjects(filter = 'all') {
   });
 }
 
-/**
- * Initialize filter button event listeners
- */
+// Filter Functionality
 function initFilters() {
   const filterBtns = document.querySelectorAll('.filter__btn');
 
@@ -136,32 +126,4 @@ function initFilters() {
 document.addEventListener('DOMContentLoaded', () => {
   renderProjects('all');
   initFilters();
-  initScrollAnimations();
 });
-
-/**
- * Initialize scroll-triggered animations for project cards
- */
-function initScrollAnimations() {
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  };
-  
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, index) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => {
-          entry.target.classList.add('animate-in');
-        }, index * 60);
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-  
-  // Observe all project cards
-  const cards = document.querySelectorAll('.project__card');
-  cards.forEach(card => {
-    observer.observe(card);
-  });
-}
